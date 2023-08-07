@@ -5,7 +5,7 @@ using Sandbox.Graphics.GUI;
 using VRage.Plugins;
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces;
-
+using Sandbox.Game.World;
 
 namespace ClientPlugin
 {
@@ -35,13 +35,14 @@ namespace ClientPlugin
 
         public void Update()
         {
-            if (MyAPIGateway.Input.IsNewKeyPressed(VRage.Input.MyKeys.T))
+            if (MySession.Static != null && MyAPIGateway.Input.IsNewKeyPressed(VRage.Input.MyKeys.T))
             {
                 MyAPIGateway.Utilities.ShowNotification("T key pressed!", 5000); // Show a notification
             }
 
             // TODO: Put your other update code here. It is called on every simulation frame!
         }
+
 
 
         // TODO: Uncomment and use this method to create a plugin configuration dialog
