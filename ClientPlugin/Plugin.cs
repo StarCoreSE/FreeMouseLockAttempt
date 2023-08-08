@@ -38,6 +38,10 @@ namespace ClientPlugin
             if (MySession.Static != null && MyAPIGateway.Input.IsNewKeyPressed(VRage.Input.MyKeys.T))
             {
                 MyAPIGateway.Utilities.ShowNotification("T key pressed!", 5000); // Show a notification
+
+                // Make cursor visible and change its position
+                MyGuiSandbox.SetMouseCursorVisibility(true);
+
             }
 
             // TODO: Put your other update code here. It is called on every simulation frame!
